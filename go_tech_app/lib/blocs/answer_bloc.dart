@@ -24,13 +24,7 @@ class AnswerBloc {
 
   Future<bool> sendAnswers() async {
 
-    print('ANSWERS JSON');
-    print(answers);
-
     var asEncoded = jsonEncode(answers);
-
-    print('AS ENCODED');
-    print(asEncoded);
 
     final response = await http.post(
       Uri.parse('http://localhost:3000/answers'),
